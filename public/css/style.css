@@ -1,0 +1,674 @@
+/* 共通パーツ */
+body {
+  color: #111;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+p {
+  /* color: #082B48; */
+  color:#111;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  /* font-weight: bold; */
+  font-size:16px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+h2{
+  color:black;
+}
+
+a {
+  text-decoration: none;
+  color: #082B48;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* 訪問済みのリンクの色を変える */
+/* a:visited{
+  color : #ff4081;
+} */
+
+a:hover {
+  text-decoration: none;
+}
+
+.contact-name:hover {
+  padding: 15px;
+  opacity: 0.7;
+  transition: 0.6s;
+  text-decoration: none;
+  background-color: #364e96;
+  color: #fff;
+}
+button{
+  border: none;
+  background: transparent;
+}
+button:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+  text-decoration: none;
+  color:#082B48;
+}
+.container {
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+  padding: 30px 0;
+  font-family: 'Prata', serif;
+}
+
+.section{
+  padding: 40px 0;
+  font-family: 'Prata', serif;
+}
+
+/* header--- -------------------------------------------------------*/
+header{
+  /* background-color: #64BCFC; */
+  background-color: #fff;
+}
+
+.header-title{
+  color:#111;
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-title{
+  color:#111;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 36px;
+  position: relative;
+  padding: 1rem 1.2rem;
+  max-width: 100%;
+  letter-spacing: 0.03em;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 40%);
+  background-position: 0 0;
+  background-size: 200% auto;
+  border-radius: 7%;
+  transition: .3s;
+}
+
+.nav-title:hover{
+  background-position: -100% 0;
+  color: #fff;
+}
+
+.top{
+  display: block;
+  background-image:url("../images/joshua-aragon-BMnhuwFYr7w-unsplash.png");
+  background-size:cover;
+  padding: 250px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+
+}
+.navbar-center{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.yuki-logo{
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  padding:20px 0;
+}
+.top-title{
+  letter-spacing: 4px;
+  font-size:70px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: rgba(54, 78, 150,0.4);
+  color:#fff;
+  border-radius: 3%;
+}
+.sub-title{
+  letter-spacing: 2px;
+  font-size:20px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(54, 78, 150, 0.4);
+  padding:10px 0;
+}
+.section-title{
+  /* font-weight: bold; */
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 5px;
+
+  color: #111;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #111;/*上線*/
+  border-bottom: solid 3px #111;/*下線*/
+
+}
+.section-subtitle{
+  text-align: center;
+  font-size:20px;
+  margin-top: 30px;
+  margin-bottom:70px;
+  color :#111;
+}
+.ul-p{
+  display:flex;
+  justify-content:space-around;
+  line-height: 141px;
+}
+
+.nav-item{
+  text-align: center;
+  margin-left: 50px;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+/* about---------------- */
+.about{
+  background-color: #fff;
+}
+.about h2{
+  text-align: center;
+}
+.about-left{
+ width: 48%;
+}
+.about-right{
+ width:48%;
+}
+.about-center{
+  display: flex;
+  justify-content: space-between;
+}
+.profile-card-title{
+  /* text-align: center; */
+  font-size: 18px;
+  font-weight: 500;
+  color:#111;
+  font-weight: bold;
+}
+.profile-card-name{
+  /* font-weight: bold; */
+  margin-top: 5px;
+  font-size: 24px;
+  line-height: 1.2;
+  padding: 20px 0;
+  text-align: center;
+  color:#364e96;
+}
+.profile-card-subhead{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom:10px;
+  color:#364e96;
+}
+.profile-card-concept{
+  line-height: 1.6;
+  font-size: 14px;
+}
+/* service -------------------*/
+.service{
+  background-color: #EEEEEE	;
+  padding: 100px 0;
+}
+.service-title{
+  color:#364e96;
+  /* font-weight: bold; */
+  margin-top: 16px;
+  font-size: 22px;
+  text-align: center;
+}
+.service-content{
+  line-height: 1.8;
+  margin-top: 12px;
+  text-align: left;
+  margin: 0 auto;
+}
+.service-wrapper{
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+.service-item{
+  width:100%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+.service-img{
+  width:100%;
+  height:auto;
+  border-radius: 10px;
+}
+/* work--------------------- */
+.work{
+  background-color:white;
+}
+.work-p{
+  display:flex;
+  justify-content: center;
+}
+.work-c{
+  padding: 10px;
+  margin: 0 auto;
+}
+.work-title{
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color:#111;
+}
+.work-img{
+  width: 100%;
+}
+.work-comment{
+  font-size: 16px;
+  color:#555;
+  line-height: 1.6;
+  margin-top: 10px;
+  text-align:left;
+}
+
+/*===============================================
+スライダーのためのcss
+===================================*/
+.slider {
+  margin-top: 150px;
+  /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+}
+.slider img {
+  width: 100%; /*スライダー内の画像を横幅100%に*/
+  height: auto;
+}
+.slider .slick-slide {
+  margin: 0 10px; /*スライド左右の余白調整*/
+}
+
+
+/* contact----------------- */
+.contact{
+  padding: 60px 0;
+}
+.contact-p{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #111;
+}
+.contact-message{
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.contact-img{
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+}
+.contact-name{
+  text-align: center;
+}
+.contact-name h2{
+  font-size: 26px;
+}
+
+.contact-name :hover{
+  color:#364e96;
+  font-size: 26px;
+}
+/* footer------------------- */
+footer{
+  background-color:#111;
+  color:#fff;
+  font-size:12px;
+  padding:20px;
+}
+.footer-center p{
+  color:#fff;
+  text-align: right;
+  margin: 16px 0;
+}
+
+/* topへ戻るボタン */
+/* 右下に固定 */
+
+.c-btn a{
+  background-color: #111111;
+  bottom: 0;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  border-radius: 10px;
+  right: 30px;
+  bottom: 30px;
+  box-shadow: 0 4px 0 #696969 ;
+  opacity: 0.6;
+}
+
+.c-btn a:hover{
+  transform: translateY(4px);
+  box-shadow: none;
+
+}
+
+/*------------------------- スマホ用の表示---------------------------*/
+@media only screen and (max-width:767px) {
+
+header{
+  padding: 10px 0;
+}
+.section-title{
+  font-size:28px;
+}
+.section-subtitle{
+  margin-bottom:30px;
+  font-size: 15px;
+
+}
+.container{
+  margin: 0 10px;
+  padding: 0 10px;
+  text-align: center;
+}
+.top{
+  padding: 130px 0;
+}
+.top-title{
+  font-size:30px;
+}
+.sub-title{
+  padding: 5px;
+  font-size: 12px;
+  letter-spacing: 0px;
+}
+.ul-p{
+  justify-content: space-between;
+}
+.nav-item{
+  margin:  0 3px;
+  font-size: 5px;
+}
+
+.navbar-center{
+display: block;
+}
+.ul-p{
+line-height: 30px;
+}
+.yuki-logo {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  height: 50%;
+  width: 50%;
+  margin-bottom: 10px;
+  padding: 20px 0;
+}
+.nav-title {
+  color: #111;
+  font-size: 16px;
+  font-weight:bold;
+  line-height: 20px;
+}
+.top-title{
+  font-size:32px;
+}
+.sub-title{
+  font-size: 12px;
+}
+.profile-card-name {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.about-center{
+  display: block;
+}
+.about-left{
+  width: 100%;
+  margin: 20px auto;
+
+}
+.about-right{
+  width:100%;
+  margin: 0 auto;
+}
+.about-right p{
+  text-align: left;
+  margin-bottom: 17px;
+}
+.profile-card-subhead{
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.profile-card-concept{
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+/* service--------------------------- */
+.service{
+  padding: 50px 0;
+}
+.service-title{
+  font-size:23px;
+}
+.service-wrapper{
+  flex-wrap: wrap ;
+}
+.service-item{
+  width: 100%;
+}
+.service-content{
+  margin: 20px 0 70px;
+}
+/* work------------------------------ */
+.work{
+  padding:50px 0;
+}
+.work-p{
+  flex-wrap: wrap;
+}
+.work-c{
+  padding: 30px;
+}
+.work-title{
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+.work-comment{
+  margin-bottom: 10px;
+}
+/* contact------------------------------------------ */
+.contact-message {
+  font-size: 14px;
+}
+
+
+.course-wrapper{
+  flex-wrap: wrap;
+}
+.course-item{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.footer-center p{
+      color: #fff;
+      text-align: center;
+}
+
+ /* ハンバーガーメニュー */
+
+
+  .drawer-icon{
+    width: 36px;
+    height: 21px;
+    position: relative;
+    z-index: 51;
+    position: absolute;
+    right: 20px;
+    color: #111;
+  }
+  .drawer-icon.is-checked{
+   position: fixed;
+  }
+
+  /* ばつボタンに変化させる */
+  .drawer-icon.is-checked .drawer-icon__bar:nth-of-type(1){
+    top: 10px;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  .drawer-icon.is-checked .drawer-icon__bar:nth-of-type(2){
+    display: none;
+  }
+  .drawer-icon.is-checked .drawer-icon__bar:nth-of-type(3){
+    top: 10px;
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+
+  /* 普通の三本線（ハンバーガーメニュー） */
+  .drawer-icon__bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 3px;
+    border-radius: 6px;
+    background: #111;
+    -webkit-transition: top 0.3s linear, -webkit-transform 0.3s linear;
+    transition: top 0.3s linear, -webkit-transform 0.3s linear;
+    transition: transform 0.3s linear, top 0.3s linear;
+    transition: transform 0.3s linear, top 0.3s linear, -webkit-transform 0.3s linear;
+  }
+  .drawer-icon__bar:nth-of-type(2){
+    top: 9px;
+  }
+  .drawer-icon__bar:nth-of-type(3){
+    top: 18px;
+  }
+
+
+
+  .drawer-content{
+    width: 320px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(221, 221, 221,0.8);;
+    z-index: 50;
+    padding: 86px 40px 40px;
+    -webkit-transform: translateX(100%);
+            transform:translateX(100%);
+    -webkit-transition: -webkit-transform 0.3s linear;
+    transition: -webkit-transform 0.3s linear;
+    transition: transform 0.3s linear;
+    transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  }
+  .drawer-content.is-checked{
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  /* 自己紹介、できること、制作例、お問い合わせ */
+
+  /* クリックしたら、線が出る。 */
+  .c-txt{
+    cursor: pointer;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    color: #111;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .drawer-content__link{
+    display: block;
+    padding: 15px 40px;
+    text-align: center;
+    font-weight: 700;
+
+  }
+  .drawer-content__link.line.center::before{
+    transform-origin: center top;
+  }
+
+  .drawer-content__button{
+    margin-top: 14px;
+    text-align: right;
+  }
+
+  .drawer-content__menu{
+    text-align: center;
+  }
+
+
+  /* ドロワーメニュー */
+  .c-txt a{
+    cursor: pointer;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    color: #111;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+  }
+
+  .c-txt a {
+  padding-bottom: 5px;
+  position: relative;
+}
+.c-txt a::before {
+  background: #111;
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+.c-txt a:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+
+  /* メニューを非表示にする。 */
+  .ul-p{
+    display: none;
+  }
+
+
+}
+@media screen and (min-width: 768px){
+  .hidden-pc{
+    display: none;
+  }
+}
