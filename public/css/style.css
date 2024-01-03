@@ -4,7 +4,16 @@ body {
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
   font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.5;
+
+  animation: bgchange 10s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+  background-repeat: no-repeat ;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+
+
 }
+
 
 img {
   height: auto;
@@ -223,7 +232,7 @@ header{
 }
 /* service -------------------*/
 .service{
-  background-color: #EEEEEE	;
+  background-color: #fff;
   padding: 100px 0;
 }
 .service-title{
@@ -257,7 +266,7 @@ header{
 }
 /* work--------------------- */
 .work{
-  background-color:white;
+  /* background-color:white; */
 }
 .work-p{
   display:flex;
@@ -285,25 +294,44 @@ header{
   text-align:left;
 }
 
-/*===============================================
-スライダーのためのcss
-===================================*/
-.slider {
-  margin-top: 150px;
-  /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+/* .flex-work{
+  display: flex;
+  justify-content: center;
+} */
+
+/* スライダー */
+.slider_work{
+  visibility: hidden;
 }
-.slider img {
-  width: 100%; /*スライダー内の画像を横幅100%に*/
-  height: auto;
+
+.slider_work.slick-initialized{
+  visibility: visible;
 }
-.slider .slick-slide {
-  margin: 0 10px; /*スライド左右の余白調整*/
+
+/* スライダー2 */
+.slider{
+  visibility: hidden;
+}
+
+.slider.slick-initialized{
+  visibility: visible;
+}
+
+.slick-prev, .slick-next{
+  z-index: 1;
+}
+.slick-prev{
+  left: 10px;
+}
+.slick-next{
+  right: 10px;
 }
 
 
 /* contact----------------- */
 .contact{
   padding: 60px 0;
+  background: #fff;
 }
 .contact-p{
   text-align: center;
@@ -370,7 +398,79 @@ footer{
   box-shadow: none;
 
 }
+/* ーーーーーーーランダム画像の切り替え表示ーーーーー*/
+.mv {
+  width: 100%;
+  height: 600px;
+  position: relative;
 
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: contain;
+  background-size: cover;
+}
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: img-change 14s infinite;
+
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: contain;
+  background-size: cover;
+}
+.item:nth-child(1) {
+  animation-delay: 0s;
+}
+.item:nth-child(2) {
+  animation-delay: 5s;
+}
+.item:nth-child(3) {
+  animation-delay: 10s;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ランダム画像切り替え */
+@keyframes img-change {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*  */
+@keyframes bgchange{
+      0%   {background:#ecf2f9;}/*変化させたい色*/
+      25%  {background:#ddd;}/*変化させたい色*/
+      50%  {background:#c8d9eb;}/*変化させたい色*/
+      75%  {background:#fff;}/*変化させたい色*/
+      90%  {background:#ecf2f9;}/*変化させたい色*/
+      100% {background:#ecf2f9;}/*変化させたい色*/
+ }
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
 /*------------------------- スマホ用の表示---------------------------*/
 @media only screen and (max-width:767px) {
 
@@ -389,9 +489,14 @@ header{
   margin: 0 10px;
   padding: 0 10px;
   text-align: center;
+  margin: 0 auto;
 }
 .top{
   padding: 130px 0;
+  background-repeat: no-repeat ;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
 }
 .top-title{
   font-size:30px;
@@ -492,12 +597,13 @@ line-height: 30px;
   padding: 30px;
 }
 .work-title{
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 23px;
 }
 .work-comment{
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
+
 /* contact------------------------------------------ */
 .contact-message {
   font-size: 14px;

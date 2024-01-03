@@ -10,20 +10,25 @@
   <link rel="stylesheet" href="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css') }}" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <title>東京都を拠点にwebアプリケーション、HP制作を行っています、webエンジニア【まえぞのさん】のポートフォリオです。</title>
   <meta name="Zono's Portfolio" content="webエンジニアまえぞののポートフォリオです">
-  <!-- css -->
+  <!-- リセットcss -->
   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+  <!--  slick(slider) CDN -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <!-- css -->
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <!-- サイトのアイコン指定 -->
   <link rel="icon" href="{{ asset('images/palm-tree-400.png') }}">
-  <!-- ?-->
+  <!-- Googleフォント指定-->
   <link rel="preconnect" href="{{ asset('https://fonts.googleapis.com') }}">
   <link rel="preconnect" href="{{ asset('https://fonts.gstatic.com') }}" crossorigin>
   <link href="{{ asset('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap') }}" rel="stylesheet">
 
-  <!-- javascript 追加！！！-->
-
+  <!-- Javascript 読み込み-->
   <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js') }}"></script>
+  <!-- jQuery読み込み -->
   <script src="{{ asset('https://code.jquery.com/ui/1.13.2/jquery-ui.js') }}"></script>
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 </head>
 
@@ -57,6 +62,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-title" href="#contact">お問い合わせ</a>
+              </li>
+              <li class="nav-item">
+                <a href="nav-title" href="{{ asset('/salesTop') }}"></a>
               </li>
             </ul>
           </div>
@@ -107,19 +115,32 @@
             前薗<br>
             【 まえぞの 】
           </div>
-          <p>東京都在住、webアプリケーション、ホームページ制作を行っております。</p>
+          <p>都内でWebエンジニアとして活動する前薗です。</p>
           <p>IT系ベンチャー企業でWEBアプリ開発のITエンジニアとして勤務しています。</p>
-          <p>趣味は旅行とダイビングです。</p>
-          <p>これまでに個人で開発してきたWEBアプリやHPを掲載しております。</p>
+          <p>これまでの経験を活かしたホームページ制作、webアプリケーション制作を得意としております。</p>
+          <p>現在は、さらなるスキルアップを目指してマーケティングについて学んでいます。</p>
+          <p>私の趣味はダイビングと旅行で、犬と音楽が好きです。</p>
+          <p>人からは人柄を褒められることが多いですが、仕事に集中しすぎて休憩を忘れることもあります。</p>
+          <p>これまでに自身で開発してきたWEBアプリやHPを掲載しております。</p>
           <p>HP制作、webアプリケーション制作承ります。</p>
+          <p>納期を守りながら柔軟に対応します。</p>
           <p>よろしくお願い致します。</p>
         </div>
       </div>
     </div>
-
-
-    </div>
   </section>
+  <!---------ランダム画像の切り替え表示--------------- -->
+  <div class="mv">
+    <div class="item active">
+      <img src="{{ asset('https://picsum.photos/1200?random=1') }}" alt="ランダム画像1" />
+    </div>
+    <div class="item">
+      <img src="{{ asset('https://picsum.photos/1200?random=2') }}" alt="ランダム画像2" />
+    </div>
+    <div class="item">
+      <img src="{{ asset('https://picsum.photos/1200?random=3') }}" alt="ランダム画像3" />
+    </div>
+  </div>
   <!-- service--------------------------------------- -->
   <section class="service section" id="service">
     <div class="container">
@@ -133,7 +154,7 @@
         <div class="service-item">
           <img class="service-img" src="{{ asset('images/25416649_s.png') }}" alt="HP-Make">
           <p class="service-title">ホームページ・LP制作</p>
-          <p class="service-content mt-2">ご要望に応じて柔軟にご提案させていただきます。Instagramと組み合わせて集客をしたいなどの、目的を達成するためのホームページやLPを一緒に作成していきましょう！</p>
+          <p class="service-content mt-2">お客様のご要望に応じて、柔軟にご提案させていただきます。目的を達成するためのホームページやLPを一緒に作成していきましょう！</p>
         </div>
         <div class="service-item">
           <img class="service-img" src="{{ asset('images/25648609_s.png') }}" alt="HP-Revise">
@@ -159,32 +180,98 @@
 
         <div class="work-c">
           <p class="work-title">
-            テンプレートLP
+            テンプレートHP
           </p>
           <p class="work-comment">
             オーダーメイドで作成したホームページです。お客様の要望に応じてサイト構成を検討しご満足いただけるホームページとなりました。
           </p>
-          <img class="work-img" src="{{ asset('images/screencapture-127-0-0-1-5503-index2-html-2023-02-04-02_14_07.png') }}" alt="BOOTSTRAP_work">
+
+          <!-- 制作実績 -->
+          <div class="flex-work">
+            <!-- OHA! -->
+            <div>
+              <img src="{{ asset('images/oha.png') }}" alt="oha_work">
+            </div>
+            <!-- Bootstrap 一時外す-->
+            <!-- <div>
+              <img src="{{ asset('images/screencapture-127-0-0-1-5503-index2-html-2023-02-04-02_14_07.png') }}" alt="BOOTSTRAP_work">
+            </div> -->
+          </div>
         </div>
       </ul>
     </div>
+    <!-- slider ----下から上に移動してみた------------------------------------>
+    <div id="key_visual">
+      <div class="slider">
+        <div>
+          <img src="{{ asset('images/img_about_scroll1.png') }}" alt="スライド画像1">
+        </div>
+        <div>
+          <img src="{{ asset('images/img_about_scroll2.png') }}" alt="スライド画像2">
+        </div>
+        <div>
+          <img src="{{ asset('images/img_about_scroll3.png') }}" alt="スライド画像3">
+        </div>
+        <div>
+          <img src="{{ asset('images/img_about_scroll4.png') }}" alt="スライド画像4">
+        </div>
+        <div>
+          <img src="{{ asset('images/img_about_scroll5.png') }}" alt="スライド画像5">
+        </div>
+        <div>
+          <img src="{{ asset('images/img_about_scroll6.png') }}" alt="スライド画像6">
+        </div>
+        <div>
+          <img src="{{ asset('images/img_about_scroll7.png') }}" alt="スライド画像7">
+        </div>
+        <div>
+          <img src="{{ asset('images/img_about_scroll8.png') }}" alt="スライド画像8">
+        </div>
+        <div>
+          <img src="{{ asset('images/img_about_scroll9.png') }}" alt="スライド画像9">
+        </div>
+        <div>
+          <img src="{{ asset('images/img_about_scroll10.png') }}" alt="スライド画像10">
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- slider ---------------------------------------->
-  <div class="about-slider">
-    <ul class="slider">
-      <li><img src="{{ asset('images/img_about_scroll1.png') }}" alt=""></li>
-      <li><img src="{{ asset('images/img_about_scroll2.png') }}" alt=""></li>
-      <li><img src="{{ asset('images/img_about_scroll3.png') }}" alt=""></li>
-      <li><img src="{{ asset('images/img_about_scroll4.png') }}" alt=""></li>
-      <li><img src="{{ asset('images/img_about_scroll5.png') }}" alt=""></li>
-      <li><img src="{{ asset('images/img_about_scroll6.png') }}" alt=""></li>
-      <li><img src="{{ asset('images/img_about_scroll7.png') }}" alt=""></li>
-      <li><img src="{{ asset('images/img_about_scroll8.png') }}" alt=""></li>
-      <li><img src="{{ asset('images/img_about_scroll9.png') }}" alt=""></li>
-      <li><img src="{{ asset('images/img_about_scroll10.png') }}" alt=""></li>
-    </ul>
-  </div>
+  <!-- slider --------------------------------------
+  <div id="key_visual">
+    <div class="slider">
+      <div>
+        <img src="{{ asset('images/img_about_scroll1.png') }}" alt="スライド画像1">
+      </div>
+      <div>
+        <img src="{{ asset('images/img_about_scroll2.png') }}" alt="スライド画像2">
+      </div>
+      <div>
+        <img src="{{ asset('images/img_about_scroll3.png') }}" alt="スライド画像3">
+      </div>
+      <div>
+        <img src="{{ asset('images/img_about_scroll4.png') }}" alt="スライド画像4">
+      </div>
+      <div>
+        <img src="{{ asset('images/img_about_scroll5.png') }}" alt="スライド画像5">
+      </div>
+      <div>
+        <img src="{{ asset('images/img_about_scroll6.png') }}" alt="スライド画像6">
+      </div>
+      <div>
+        <img src="{{ asset('images/img_about_scroll7.png') }}" alt="スライド画像7">
+      </div>
+      <div>
+        <img src="{{ asset('images/img_about_scroll8.png') }}" alt="スライド画像8">
+      </div>
+      <div>
+        <img src="{{ asset('images/img_about_scroll9.png') }}" alt="スライド画像9">
+      </div>
+      <div>
+        <img src="{{ asset('images/img_about_scroll10.png') }}" alt="スライド画像10">
+      </div>
+    </div>
+  </div> -->
   <!-----contact------------------------------------------>
   <section class="contact section" id="contact">
     <div class="container">
@@ -206,7 +293,7 @@
   <footer>
     <div class="container">
       <div class="footer-center">
-        <p class="ml-auto">Copyright(C) 2023 Yuki Maezono All Rights Reserved.</p>
+        <p class="ml-auto">Copyright(C) 2024 Maezono All Rights Reserved.</p>
       </div>
     </div>
   </footer>
@@ -216,15 +303,10 @@
     <a href="{{ asset('#') }}">TOPへ戻る</a>
   </div>
 
-  <!-- 大事 -->
+  <!-- js読み込み -->
   <script src="{{ asset('js/script.js') }}"></script>
-  <!-- 大事 -->
-  <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js') }}"></script>
-
-  <script src="{{ asset('https://code.jquery.com/jquery-3.7.1.min.js') }}"></script>
-  <script src="{{ asset('https://code.jquery.com/ui/1.13.2/jquery-ui.js') }}"></script>
-
-  <script src="{{ asset('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js') }}"></script>
+  <!-- slick読み込み -->
+  <script type="text/javascript" src="{{ asset('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js') }}"></script>
 
 </body>
 
